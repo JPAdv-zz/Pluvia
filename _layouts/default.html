@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  		<title>
+  			{{page.tittle}}
+  		</title>
+  		<link rel="stylesheet" "http://fonts.googleapis.com/css?family=Oxygen:400,700">
+  		<link rel ="stylesheet" type="text/css" href="/assets/stylesheets/application.css">
+  		<meta name="viewport" content="width=device-width">
+  		{% include _shin.html %}
+	</head>
+	
+	<!-- The main body of the website -->
+	<body>
+		<!-- The main header of the site. -->
+		{% include _header.html %}
+		<!-- A container that holds the contents of the site. -->
+		<div class='site'>
+
+			{{ content }}
+
+			{% include _footer.html %}
+		</div>
+	</body>
+</html>

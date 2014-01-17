@@ -1,2 +1,4 @@
-@import url('./main.css') screen;
+/*@import url('./main.css') screen;*/
 @import url('./syntax.css') screen;
+@import url('./custom.css') screen;
+@import url('./css/bootstrap.min.css') screen;

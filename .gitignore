@@ -1,6 +1,8 @@
 # Ignore the site.
 _site
 
+.sass-cache/*
+
 #Ignore unwanted files
 *~
 .DS_Store

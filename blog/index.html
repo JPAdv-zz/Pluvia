@@ -3,13 +3,80 @@ layout: default
 title: Pluvia > Blog
 ---
 
+<style>
+	/*
+ * Off Canvas
+ * --------------------------------------------------
+ */
+@media screen and (max-width: 767px) {
+  .row-offcanvas {
+    position: relative;
+    -webkit-transition: all 0.25s ease-out;
+    -moz-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+  }
+
+  .row-offcanvas-right
+  .sidebar-offcanvas {
+    right: -50%; /* 6 columns */
+  }
+
+  .row-offcanvas-left
+  .sidebar-offcanvas {
+    left: -50%; /* 6 columns */
+  }
+
+  .row-offcanvas-right.active {
+    right: 50%; /* 6 columns */
+  }
+
+  .row-offcanvas-left.active {
+    left: 50%; /* 6 columns */
+  }
+
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+    width: 50%; /* 6 columns */
+  }
+}
+</style>
+
 <canvas id='canvaSquare' data-shape='square'>
 	Canvas not supported in your browser.
 </canvas>
+        <div class="row row-offcanvas row-offcanvas-right">
 
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+        <div class="col-xs-12 col-sm-9">
+          <p class="pull-right visible-xs">
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+          </p>
+          <div class="jumbotron">
+            <h1>Blogs</h1>
+            <p>This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try some responsive-range viewport sizes to see it in action.</p>
+          </div>
+
+          <div class="row">
+           {% for post in site.posts %}
+            <div class="col-6 col-sm-6 col-lg-4">
+              <h2>{{ post.title}}</h2>
+              <p>
+              	  {{ post.date | date_to_string}}
+              	  {{post.excerpt}}
+              </p>
+              <p><a class="btn btn-default" href="{{post.url}}" role="button">View details &raquo;</a></p>
+            </div><!--/span-->
+            {% endfor %}
+          </div><!--/row-->
+        </div><!--/span-->
+
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+          <div class="list-group">
+          	{% for post in site.posts %}
+            	<a href="{{post.url}}" class="list-group-item">{{post.title}}</a>
+            {% endfor %}
+          </div>
+        </div><!--/span-->
+      </div><!--/row-->
+
+      <hr>

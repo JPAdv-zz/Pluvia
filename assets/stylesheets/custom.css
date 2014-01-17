@@ -5,7 +5,8 @@ canvas {
   left: 0px;
   top: 0px;
   z-index: -1;
-  min-width: 900px; }
+  min-width: 900px; 
+}
 
 /* Sticky footer styles
 -------------------------------------------------- */
@@ -39,6 +40,7 @@ body {
 
 #wrap > .container {
   padding: 60px 15px 0;
+  background-color: rgba(255,255,255, 0.92);
 }
 .container .text-muted {
   margin: 20px 0;

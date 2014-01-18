@@ -1,5 +1,5 @@
 ###
-	A canvas wallpaper.
+	A canvas wallpaper that shows pixaleted flames.
 	@Author: Jose Padilla
 ###
 
@@ -11,7 +11,7 @@ $ -> $('#canvaSquare').click ->
 
 # Initial variables
 shape = canvas = context = bufferCanvas = bufferContext = timer = anim = null
-rainDropsArray = []
+flareDropsArray = []
 MAX_DROPS = 50
 TIMER_SPEED = 10
 ANIMATION_SPEED = 5
@@ -59,8 +59,8 @@ Rain = () ->
 	return
 
 addDrop = () ->
-	rainDropsArray[rainDropsArray.length] = new Rain()
-	if rainDropsArray.length == MAX_DROPS
+	flareDropsArray[flareDropsArray.length] = new Rain()
+	if flareDropsArray.length == MAX_DROPS
 		clearInterval(timer)
 		clearInterval(anim)
 	return
@@ -71,19 +71,19 @@ animation = () ->
 	return
 
 blank = () ->
-	bufferContext.fillStyle = '#edeef0'
+	bufferContext.fillStyle = '#2A2B3D'
 	bufferContext.fillRect 0, 0, bufferContext.canvas.width, bufferContext.canvas.height
 	return
 
 Update = () ->
 	RAINDROPS_ARRAY_WIDTH = 1.001
-	for e, i in rainDropsArray
-		if rainDropsArray[i].x <= canvas.width + rainDropsArray[i].width
-			#rainDropsArray[i].x += Math.random() * 0.20 + rainDropsArray[i].speed
-			rainDropsArray[i].width += RAINDROPS_ARRAY_WIDTH
-			rainDropsArray[i].height = rainDropsArray[i].width 
+	for e, i in flareDropsArray
+		if flareDropsArray[i].y >= 0 - flareDropsArray[i].height
+			flareDropsArray[i].y -= Math.random() * 0.20 + flareDropsArray[i].speed
+			#flareDropsArray[i].width = RAINDROPS_ARRAY_WIDTH
+			flareDropsArray[i].height -= flareDropsArray[i].width 
 		else
-			rainDropsArray[i].x = -1 * rainDropsArray[i].width
+			flareDropsArray[i].y = -1 * flareDropsArray[i].height
 	return
 
 Draw = (s) ->
@@ -93,10 +93,10 @@ Draw = (s) ->
 
 	if s == 'circle'
 		LINE_WIDTH = 0.5
-		for e, i in rainDropsArray
+		for e, i in flareDropsArray
 			bufferContext.beginPath()
-			bufferContext.arc rainDropsArray[i].x, rainDropsArray[i].y, rainDropsArray[i].width / 2, 0, 2 * Math.PI, false
-			bufferContext.fillStyle = "rgba(77,77,77," + rainDropsArray[i].opacity + ")"
+			bufferContext.arc flareDropsArray[i].x, flareDropsArray[i].y, flareDropsArray[i].width / 2, 0, 2 * Math.PI, false
+			bufferContext.fillStyle = "rgba(81,83,107," + flareDropsArray[i].opacity + ")"
 			bufferContext.fill()
 			bufferContext.lineWidth = LINE_WIDTH
 			bufferContext.strokeStyle = 'rgba(60,50,103,0.5)'
@@ -105,9 +105,9 @@ Draw = (s) ->
 		context.restore()
 	
 	if s == 'square'
-		for e, i in rainDropsArray
-			bufferContext.fillStyle = "rgba(77,77,77," + rainDropsArray[i].opacity + ")"
-			bufferContext.fillRect rainDropsArray[i].x, rainDropsArray[i].y, rainDropsArray[i].width, rainDropsArray[i].height
+		for e, i in flareDropsArray
+			bufferContext.fillStyle = "rgba(81,83,107," + flareDropsArray[i].opacity + ")"
+			bufferContext.fillRect flareDropsArray[i].x, flareDropsArray[i].y, flareDropsArray[i].width, flareDropsArray[i].height
 		context.drawImage bufferCanvas, 0, 0, bufferCanvas.width, bufferCanvas.height
 		context.restore()
 	return

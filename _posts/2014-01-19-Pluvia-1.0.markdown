@@ -1,0 +1,21 @@
+---
+layout: post
+title:  "Pluvia 1.0"
+date:   2014-01-19
+categories: bootstrap update web-development pluvia
+---
+
+After much thought, many redesigns, and changing different frameworks, I can finally say that I am very pleased with
+the results. Pluvia (the name of this website) has finally reached 1.0 and is now live. [Jekyll][jekyll], [Bootstrap][boot], and [Heroku][heroku] are the core of this website. While the site may not be optimized yet, there are other things that I would like to mention.
+
+*	First, this site is definitely open-sourced, that is, that any of the contents that you find here are free to use (unless stated otherwise).
+
+*	Second, if you decide to use some of the code I provide, make sure that you simply give me and any other authors some credit. We like to see that we have helped people.
+
+*	Third, for the time being, some of the projects I have available (besides for the repos in GitHub) can only be viewed. I will try to add more projects and have them downloadable for you to use.
+
+*	Lastly, as I continue to expand my never-ending knowledge of computers (hardware and software), feel free to make comments. Love to read some of the feedback.
+
+[jekyll]:	http://jekyllrb.com
+[boot]:		http://getbootstrap.com
+[heroku]:	http://heroku.com

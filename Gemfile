@@ -7,3 +7,4 @@ gem 'rack-jekyll', github: 'adaoraul/rack-jekyll', ref: '6a4b832c5b2350c8c1263b5
 gem 'unicorn'
 gem 'sass'
 gem 'coffee-script'
+gem 'nokogiri'

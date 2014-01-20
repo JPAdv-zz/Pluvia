@@ -16,6 +16,6 @@ the results. Pluvia (the name of this website) has finally reached 1.0 and is no
 
 *	Lastly, as I continue to expand my never-ending knowledge of computers (hardware and software), feel free to make comments. Love to read some of the feedback.
 
-[jekyll]:	http://jekyllrb.com
-[boot]:		http://getbootstrap.com
-[heroku]:	http://heroku.com
+[jekyll]: http://jekyllrb.com
+[boot]: http://getbootstrap.com
+[heroku]: http://heroku.com

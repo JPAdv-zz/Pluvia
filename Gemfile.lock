@@ -1,3 +1,12 @@
+GIT
+  remote: git://github.com/adaoraul/rack-jekyll.git
+  revision: 6a4b832c5b2350c8c1263b534ebf02135deb6363
+  ref: 6a4b832c5b2350c8c1263b534ebf02135deb6363
+  specs:
+    rack-jekyll (0.4.0)
+      jekyll (>= 0.12.0, < 2.0)
+      rack (~> 1.5.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -40,7 +49,6 @@ GEM
     raindrops (0.12.0)
     redcarpet (2.2.2)
     safe_yaml (0.7.1)
-    sass (3.2.9)
     unicorn (4.7.0)
       kgio (~> 2.6)
       rack
@@ -54,5 +62,5 @@ DEPENDENCIES
   coffee-script
   jekyll (~> 1.1.2)
   nokogiri
-  sass
+  rack-jekyll!
   unicorn

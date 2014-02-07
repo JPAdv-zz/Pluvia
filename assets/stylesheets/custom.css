@@ -119,3 +119,8 @@ nav.navbar-default .navbar-toggle .icon-bar {
   line-height: 1;
   letter-spacing: -1px;
 }
+
+img#jplogo {
+  position: relative;
+  top: -12px;
+}

@@ -1,7 +1,6 @@
 # Ignore the site.
 _site
-
-.sass-cache/*
+about
 
 #Ignore unwanted files
 *~

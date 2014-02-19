@@ -1,6 +1,6 @@
 # Ignore the site.
 _site
-about
+about/*
 
 #Ignore unwanted files
 *~

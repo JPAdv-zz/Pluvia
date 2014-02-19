@@ -1,8 +1,8 @@
 ###
 	A canvas wallpaper that shows pixaleted flames.
+	A better implementation will be done in the future.
 	@Author: Jose Padilla
 ###
-
 
 $ -> init()
 $ -> $('#canvaSquare').click -> 
@@ -107,7 +107,8 @@ Draw = (s) ->
 	if s == 'square'
 		for e, i in flareDropsArray
 			bufferContext.fillStyle = "rgba(81,83,107," + flareDropsArray[i].opacity + ")"
-			bufferContext.fillRect flareDropsArray[i].x, flareDropsArray[i].y, flareDropsArray[i].width, flareDropsArray[i].height
+			bufferContext.fillRect flareDropsArray[i].x, flareDropsArray[i].y, flareDropsArray[i].width,
+			flareDropsArray[i].height
 		context.drawImage bufferCanvas, 0, 0, bufferCanvas.width, bufferCanvas.height
 		context.restore()
 	return

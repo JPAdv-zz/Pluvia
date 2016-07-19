@@ -1,6 +1,6 @@
 name: Pluvia
 markdown: redcarpet
-pygments: true
+highlighter: pygments
 exclude:
  - unicorn.rb
  - README.md
